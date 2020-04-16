@@ -16,7 +16,7 @@ module SortableTable
       else
         goto = params.merge( sort_params )
       end
-      link_to title, goto, options.merge( {class: css_class } )
+      link_to "#{title}#{icon(:sort_up)}#{icon(:sort_down)}".html_safe, goto, options.merge( {class: css_class } )
     end
   end
 end
